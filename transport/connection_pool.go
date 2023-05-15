@@ -669,7 +669,8 @@ func (handler *connectionHandler) handleMessage(msg sip.Message, raddr string) {
 				} else {
 					port = sip.DefaultPort(handler.Connection().Network())
 				}
-				raddr = fmt.Sprintf("%s:%d", rhost, port)
+				_ = port
+				// raddr = fmt.Sprintf("%s:%d", rhost, port)
 			}
 		}
 
